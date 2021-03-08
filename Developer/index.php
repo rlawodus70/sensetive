@@ -48,20 +48,172 @@
     <!-- 컨텐츠 구역 -->
     <div id="index-content">
         <div id="best-brandbox">
-            <p>Best Brand</p>
-            <a href="#">브랜드 더보기 ></a>
-            <div class="brand-Content">
-                <div class="brand-imgBox">
-                    <img src="#">
+            <div class="best-brandbox">
+
+                <!-- 베스트 브랜드 타이틀 영역 -->
+                <div class="best-textbox">
+                    <p class="text-top">Best<strong>Brand</strong></p>
+                    <a class="text-bottom" href="#">브랜드 더 보기 ></a>
                 </div>
-                <p>브랜드 타이틀</p>
-                <p>브랜드 설명</p>
+
+                <!-- 베스트 브랜드 컨텐츠 영역 -->
+                <div id="brand-Content">
+                    <div class="brand-Content">
+                        <a href="#">
+                            <div class="brand-imgBox">
+                                <img src="image/brand/test.jpg">
+                            </div>
+                            <p class="brand-title">브랜드 타이틀</p>
+                            <p class="brand-explan">브랜드 설명</p>
+                        </a>
+                    </div>
+                    <div class="brand-Content">
+                        <a href="#">
+                            <div class="brand-imgBox">
+                                <img src="image/brand/test.jpg">
+                            </div>
+                            <p class="brand-title">브랜드 타이틀</p>
+                            <p class="brand-explan">브랜드 설명</p>
+                        </a>
+                    </div>
+                    <div class="brand-Content">
+                        <a href="#">
+                            <div class="brand-imgBox">
+                                <img src="image/brand/test.jpg">
+                            </div>
+                            <p class="brand-title">브랜드 타이틀</p>
+                            <p class="brand-explan">브랜드 설명</p>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div id="brand-pick">
+            <img src="image/brand/test1.png">
+        </div>
+
+        <div id="best-product">
+            <div class="best-product">
+                <!-- 베스트 브랜드 타이틀 영역 -->
+                <div id="best_product-textbox">
+                    <p class="text-top margin-left">베스트<strong>상품</strong></p>
+                    <a class="text-bottom" href="#">센서티브 엠디가<br>자신있게 추천합니다.</a>
+                </div>
+                <div id="best_product-content">
+                    <div class="best_product-content">
+                        <a href="#">
+                            <div class="product-imgBox">
+                                <img src="#">
+                            </div>
+                            <p class="product-title">상품 타이틀</p>
+                            <p class="product-price">상품 가격</p>
+                        </a>
+                    </div>
+                    <div class="best_product-content">
+                        <a href="#">
+                            <div class="product-imgBox">
+                                <img src="#">
+                            </div>
+                            <p class="product-title">상품 타이틀</p>
+                            <p class="product-price">상품 가격</p>
+                        </a>
+                    </div>
+                    <div class="best_product-content">
+                        <a href="#">
+                            <div class="product-imgBox">
+                                <img src="#">
+                            </div>
+                            <p class="product-title">상품 타이틀</p>
+                            <p class="product-price">상품 가격</p>
+                        </a>                            
+                    </div>
+                    <div class="best_product-content">
+                        <a href="#">
+                            <div class="product-imgBox">
+                                <img src="#">
+                            </div>
+                            <p class="product-title">상품 타이틀</p>
+                            <p class="product-price">상품 가격</p>
+                        </a>                            
+                    </div>
+                    <div class="best_product-content">
+                        <a href="#">
+                            <div class="product-imgBox">
+                                <img src="#">
+                            </div>
+                            <p class="product-title">상품 타이틀</p>
+                            <p class="product-price">상품 가격</p>
+                        </a>
+                    </div>
+                    <div class="best_product-content">
+                        <a href="#">
+                            <div class="product-imgBox">
+                                <img src="#">
+                            </div>
+                            <p class="product-title">상품 타이틀</p>
+                            <p class="product-price">상품 가격</p>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <div id="mood-categorie">
+            <ul class="mood-categorie">
+                <li>           
+                    <div class="mood-whybox">
+                        <span>왜그렇게</span>
+                        <span>짜쯩이</span>
+                        <span>나있어요</span>
+                    </div>
+                </li>
+                <a href="#"><li>
+                    <img src="image/brand/test.jpg">
+                    <div class="mood-textbox">
+                        <p>옷이 너무</p>
+                        <p>꺼끌꺼끌해요?</p>
+                    </div>
+                </li></a>
+                <a href="#"><li>
+                    <img src="#">
+                    <div class="mood-textbox">
+                        <p>잠을</p>
+                        <p>설쳤다구요?</p>
+                    </div>
+                </li></a>
+                <a href="#"><li>
+                    <img src="#">
+                    <div class="mood-textbox">
+                        <p>몸도 안 좋구?</p>
+                    </div>
+                </li></a>
+                <a href="#"><li>
+                    <img src="#">
+                    <div class="mood-textbox">
+                        <p>아무것도 위로가</p>
+                        <p>되지 않아요?</p>
+                    </div>
+                </li></a>
+            </ul>
+        </div>
+
+        <div id="day-recommen">
+
         </div>
     </div>
 
     <!-- 푸터 영역 -->
-    <footer></footer>
+    <footer>
+        <div class="footer-top">
+            <ul class="company-list">
+                <li><a href="#">회사 소개</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">개인정보 처리방침</a></li>
+            </ul>
+        </div>
+    </footer>
     <script>
         const windowTop = document.querySelector("#scroll-top");
 
