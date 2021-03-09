@@ -55,22 +55,19 @@
         </div>
         <div class="main-imgslide">
             <ul class="imgslide-list">
+                <?php
+                for($i=0; $i<=3; $i++){
+                ?>
                 <li>
-                    <p class="imgslide-top">브랜드명<p>
-                    <p class="imgslide-bottom">브랜드 설명<p>
+                    <div class="imgtext-fillbox"></div>
+                    <div class="imgtext-front">
+                        <p class="imgslide-top">브랜드명</p>
+                        <p class="imgslide-bottom">브랜드 설명</p>
+                    </div>
                 </li>
-                <li>
-                    <p class="imgslide-top">브랜드명<p>
-                    <p class="imgslide-bottom">브랜드 설명<p>
-                </li>
-                <li>
-                    <p class="imgslide-top">브랜드명<p>
-                    <p class="imgslide-bottom">브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명<p>
-                </li>
-                <li>
-                    <p class="imgslide-top">브랜드명<p>
-                    <p class="imgslide-bottom">브랜드 설명<p>
-                </li>
+                <?php
+                }
+                ?>
             </ul>
         </div>
     </div>
@@ -146,13 +143,15 @@
                     </div>
                 </li>
                 <?php
+                $cate_top = array("","옷이 너무","잠을","몸도 안 좋구?","아무것도 위로가");
+                $cate_bottom = array("","꺼끌꺼끌해요","설쳤다구요?","","되지 않아요?");
                 for($i=1; $i<=4; $i++){
                 ?>
                 <a href="#"><li>
                     <img src="image/category/상황별상품<?=$i?>.jpg">
                     <div class="mood-textbox">
-                        <p>옷이 너무</p>
-                        <p>꺼끌꺼끌해요?</p>
+                        <p><?=$cate_top[$i]?></p>
+                        <p><?=$cate_bottom[$i]?></p>
                     </div>
                 </li></a>
                 <?php
@@ -191,13 +190,14 @@
             
             let now = 0; // 첫번째 값
             var imgcount = slideTextBox.length-1; // 마지막 값
+            document.querySelector(`.imgslide-list > li:nth-child(${now+1}) > .imgtext-fillbox`).classList.add("imgtext-fill-start");
 
             slideTextBox.forEach((el,index)=>{
                  el.addEventListener("click",function(){  
                     clickAnimate(index);
                  })  
             })
-            function clickAnimate(index){
+            function clickAnimate(index, el){
                 now = index;
                 startAnimate();
             }
@@ -207,9 +207,33 @@
             }, 5000);
 
             function startAnimate(){
+                let nth = now;
+                const slideText = document.querySelectorAll(`.imgslide-list > li`);
+                
+                slideText.forEach(el => 
+                    el.querySelector(".imgtext-fillbox").classList.remove("imgtext-fill-start")
+                );
+                document.querySelector(`.imgslide-list > li:nth-child(${nth+1}) > .imgtext-fillbox`).classList.add("imgtext-fill-start");
                 slideBox.style.transform=`translateX(-${25*now}%)`;
             }
         }
+    </script>
+    <script>
+        const header = document.querySelector("header");
+        var menuHeight = header.offsetHeight+1;
+
+        window.addEventListener('scroll',function(){
+            let windowHeight = window.innerHeight;  // 스크롤 바 높이
+            let fullHeight = document.body.scrollHeight;    // 전체 스크롤 높이
+            console.log(window.scrollY);
+            if(menuHeight < window.scrollY ){
+                header.style.position='fixed';
+            } else {
+                header.style.position='relative';
+            }
+            // let position = window; // 현재 스크롤 높이
+            // console.log(fullHeight);
+        })        
     </script>
 </body>
 </html>

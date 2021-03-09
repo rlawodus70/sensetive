@@ -1,3 +1,26 @@
+@keyframes fill-box {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.imgtext-fill-start {
+    animation: 5s fill-box backwards;
+}
+.imgtext-fillbox {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0px; left: 0px;
+    background-color: #fff;
+}
+.imgtext-front{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
 /* 이미지 슬라이드 영역 */
 #main-imgslide{
     width: 100%; height: 600px;
@@ -36,17 +59,18 @@
 }
 .imgslide-list li{
     width: 13%;
-    height: 45px;
     display: flex;
     flex-direction: column;
-    padding: 12px;
     background-color: rgba(255,255,255,0.5);
     cursor: pointer;
     margin: 0px 2px 0px 0px;
+    position: relative;
+    padding: 10px;
 }
 .imgslide-list p{
-    margin-left: 0px;
+    margin: 0px;
     color: #222;
+    width: 100%;
 }
 .imgslide-top{
     text-overflow: ellipsis;
@@ -60,7 +84,6 @@
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
-    width: 100%;
     height: 18px;
     margin-top: 5px;
     font-size: 0.75rem;

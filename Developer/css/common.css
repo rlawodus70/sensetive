@@ -45,12 +45,14 @@ body{
 /* 메뉴 영역 */
 header{
     width: 100%;
+    z-index: 100;
+    background-color: white;
+    border-bottom: 1px solid #eee;
 }
 #header-box{
     width: 1200px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 15px;
 }
 #user-list{
     display: flex;
@@ -69,6 +71,7 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-bottom: 15px;
 }
 .logobox{
     margin: 0px 20px;
