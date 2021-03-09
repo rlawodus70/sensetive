@@ -10,7 +10,7 @@
 <body>
     <!-- Top(탑) 기능 -->
     <div id="scroll-top">
-        <p class="scroll-text">TOP</p>
+        <p class="scroll-text"><i></i>TOP</p>
     </div>
 
     <!-- 모달 박스 -->
@@ -43,6 +43,32 @@
     
     <!-- 이미지 슬라이드 구역 -->
     <div id="main-imgslide">
+        <div class="imgslide-box">
+            <img class="imgslide-imgbox" src="image/imgslide/slide1.gif">
+            <img class="imgslide-imgbox" src="image/imgslide/slide2.jpeg">
+            <img class="imgslide-imgbox" src="image/imgslide/slide3.jpeg">
+            <img class="imgslide-imgbox" src="image/imgslide/slide4.jpeg">
+        </div>
+        <div class="main-imgslide">
+            <ul class="imgslide-list">
+                <li>
+                    <p class="imgslide-top">브랜드명<p>
+                    <p class="imgslide-bottom">브랜드 설명<p>
+                </li>
+                <li>
+                    <p class="imgslide-top">브랜드명<p>
+                    <p class="imgslide-bottom">브랜드 설명<p>
+                </li>
+                <li>
+                    <p class="imgslide-top">브랜드명<p>
+                    <p class="imgslide-bottom">브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명브랜드 설명<p>
+                </li>
+                <li>
+                    <p class="imgslide-top">브랜드명<p>
+                    <p class="imgslide-bottom">브랜드 설명<p>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- 컨텐츠 구역 -->
@@ -58,33 +84,21 @@
 
                 <!-- 베스트 브랜드 컨텐츠 영역 -->
                 <div id="brand-Content">
-                    <div class="brand-Content">
-                        <a href="#">
-                            <div class="brand-imgBox">
-                                <img src="image/brand/test.jpg">
-                            </div>
-                            <p class="brand-title">브랜드 타이틀</p>
-                            <p class="brand-explan">브랜드 설명</p>
-                        </a>
-                    </div>
-                    <div class="brand-Content">
-                        <a href="#">
-                            <div class="brand-imgBox">
-                                <img src="image/brand/test.jpg">
-                            </div>
-                            <p class="brand-title">브랜드 타이틀</p>
-                            <p class="brand-explan">브랜드 설명</p>
-                        </a>
-                    </div>
-                    <div class="brand-Content">
-                        <a href="#">
-                            <div class="brand-imgBox">
-                                <img src="image/brand/test.jpg">
-                            </div>
-                            <p class="brand-title">브랜드 타이틀</p>
-                            <p class="brand-explan">브랜드 설명</p>
-                        </a>
-                    </div>
+                    <?php
+                    for($i=0;$i<=2;$i++){
+                        ?>
+                        <div class="brand-Content">
+                            <a href="#">
+                                <div class="brand-imgBox">
+                                    <img src="image/brand/test.jpg">
+                                </div>
+                                <p class="brand-title">브랜드 타이틀</p>
+                                <p class="brand-explan">브랜드 설명</p>
+                            </a>
+                        </div>
+                        <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -220,6 +234,34 @@
         windowTop.addEventListener("click",function(){
             window.scrollTo(0,0);
         })
+    </script>
+    <script>
+        slideAnimation();
+        function slideAnimation(){
+            const slideBox = document.querySelector(".imgslide-box");
+            const slideTextBox =document.querySelectorAll(".imgslide-list li");
+            
+            let now = 0; // 첫번째 값
+            var imgcount = slideTextBox.length-1; // 마지막 값
+
+            slideTextBox.forEach((el,index)=>{
+                 el.addEventListener("click",function(){  
+                    clickAnimate(index);
+                 })  
+            })
+            function clickAnimate(index){
+                now = index;
+                startAnimate();
+            }
+            setInterval(() => {
+                now = now > 2 ? 0 : now+1;
+                startAnimate();
+            }, 5000);
+
+            function startAnimate(){
+                slideBox.style.transform=`translateX(-${25*now}%)`;
+            }
+        }
     </script>
 </body>
 </html>

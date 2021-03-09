@@ -11,26 +11,36 @@ html {
 }
 body{
     position: relative;
+    overflow-x: hidden;
 }
 /* 스크롤 탑 영역 */
 #scroll-top{
     position: relative;
 }
 .scroll-text{
-    background-color: #222;
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 0.4rem;
     font-weight: 600;
     position: fixed;
-    right: 50px;
+    right: 100px;
     border-radius: 50%;
-    color: white;
     bottom: 50px;
+    background-color: #eeedee;
+    color:#949494;
+    z-index: 20;
+}
+.scroll-text i{
+    width: 10px;
+    height: 10px;
+    padding-bottom: 2px;
+    background-image: url(../image/icon/top.png);
+    background-repeat: no-repeat;
 }
 /* 메뉴 영역 */
 header{
