@@ -20,34 +20,38 @@
 
     <!-- 메뉴바 및 로고  -->
     <header>
-        <ul id="user-list">
-            <li><a href="">로그인/회원가입</a></li>
-            <li><a href="">주문/배송</a></li>
-            <li><a href="">장바구니</a></li>
-        </ul>
-        <nav>
-            <a class="logobox" href="#"><img src="image/sensitive_logo.png"></a>
-            <ul id="menu-list">
-                <li><a href="">디자인가전</a></li>
-                <li><a href="">가구/수납</a></li>
-                <li><a href="">패브릭/생활</a></li>
-                <li><a href="">데코/조명</a></li>
-                <li><a href="">패션의류</a></li>                                                                                                                          </li>
-                <li><a href="">뷰티</a></li>
+        <div id="header-box">
+            <ul id="user-list">
+                <li><a href="">로그인/회원가입</a></li>
+                <li><a href="">주문/배송</a></li>
+                <li><a href="">장바구니</a></li>
             </ul>
-            <form class="search-box">
-                <input type="text" placeholder="검색창" class="search-text">
-            </form>
-        </nav>
+            <nav>
+                <a class="logobox" href="#"><img src="image/sensitive_logo.png"></a>
+                <ul id="menu-list">
+                    <li><a href="">가구/수납</a></li>
+                    <li><a href="">패브릭/생활</a></li>
+                    <li><a href="">데코/조명</a></li>
+                    <li><a href="">패션의류</a></li>                                                                                                                          </li>
+                    <li><a href="">뷰티</a></li>
+                </ul>
+                <form class="search-box">
+                    <input type="text" placeholder="검색창" class="search-text">
+                </form>
+            </nav>
+        </div>
     </header>
     
     <!-- 이미지 슬라이드 구역 -->
     <div id="main-imgslide">
         <div class="imgslide-box">
-            <img class="imgslide-imgbox" src="image/imgslide/slide1.gif">
-            <img class="imgslide-imgbox" src="image/imgslide/slide2.jpeg">
-            <img class="imgslide-imgbox" src="image/imgslide/slide3.jpeg">
-            <img class="imgslide-imgbox" src="image/imgslide/slide4.jpeg">
+            <?php
+            for($i=1; $i<=4; $i++){
+            ?>
+                <img class="imgslide-imgbox" src="image/imgslide/slide<?=$i?>.jpeg">
+            <?php
+            }
+            ?>
         </div>
         <div class="main-imgslide">
             <ul class="imgslide-list">
@@ -85,12 +89,12 @@
                 <!-- 베스트 브랜드 컨텐츠 영역 -->
                 <div id="brand-Content">
                     <?php
-                    for($i=0;$i<=2;$i++){
+                    for($i=1;$i<=3;$i++){
                         ?>
                         <div class="brand-Content">
                             <a href="#">
                                 <div class="brand-imgBox">
-                                    <img src="image/brand/test.jpg">
+                                    <img src="image/brand/베스트브랜드<?=$i ?>.jpg">
                                 </div>
                                 <p class="brand-title">브랜드 타이틀</p>
                                 <p class="brand-explan">브랜드 설명</p>
@@ -104,7 +108,7 @@
         </div>
 
         <div id="brand-pick">
-            <img src="image/brand/test1.png">
+            
         </div>
 
         <div id="best-product">
@@ -115,61 +119,21 @@
                     <a class="text-bottom" href="#">센서티브 엠디가<br>자신있게 추천합니다.</a>
                 </div>
                 <div id="best_product-content">
+                    <?php
+                    for($i=1; $i<=6; $i++){
+                    ?>
                     <div class="best_product-content">
                         <a href="#">
                             <div class="product-imgBox">
-                                <img src="#">
+                                <img src="image/product/베스트상품<?=$i ?>.jpg">
                             </div>
                             <p class="product-title">상품 타이틀</p>
                             <p class="product-price">상품 가격</p>
                         </a>
                     </div>
-                    <div class="best_product-content">
-                        <a href="#">
-                            <div class="product-imgBox">
-                                <img src="#">
-                            </div>
-                            <p class="product-title">상품 타이틀</p>
-                            <p class="product-price">상품 가격</p>
-                        </a>
-                    </div>
-                    <div class="best_product-content">
-                        <a href="#">
-                            <div class="product-imgBox">
-                                <img src="#">
-                            </div>
-                            <p class="product-title">상품 타이틀</p>
-                            <p class="product-price">상품 가격</p>
-                        </a>                            
-                    </div>
-                    <div class="best_product-content">
-                        <a href="#">
-                            <div class="product-imgBox">
-                                <img src="#">
-                            </div>
-                            <p class="product-title">상품 타이틀</p>
-                            <p class="product-price">상품 가격</p>
-                        </a>                            
-                    </div>
-                    <div class="best_product-content">
-                        <a href="#">
-                            <div class="product-imgBox">
-                                <img src="#">
-                            </div>
-                            <p class="product-title">상품 타이틀</p>
-                            <p class="product-price">상품 가격</p>
-                        </a>
-                    </div>
-                    <div class="best_product-content">
-                        <a href="#">
-                            <div class="product-imgBox">
-                                <img src="#">
-                            </div>
-                            <p class="product-title">상품 타이틀</p>
-                            <p class="product-price">상품 가격</p>
-                        </a>
-                    </div>
-
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </div>
@@ -178,38 +142,22 @@
             <ul class="mood-categorie">
                 <li>           
                     <div class="mood-whybox">
-                        <span>왜그렇게</span>
-                        <span>짜쯩이</span>
-                        <span>나있어요</span>
+                        <img src="image/category/상황별상품메인.jpg">
                     </div>
                 </li>
+                <?php
+                for($i=1; $i<=4; $i++){
+                ?>
                 <a href="#"><li>
-                    <img src="image/brand/test.jpg">
+                    <img src="image/category/상황별상품<?=$i?>.jpg">
                     <div class="mood-textbox">
                         <p>옷이 너무</p>
                         <p>꺼끌꺼끌해요?</p>
                     </div>
                 </li></a>
-                <a href="#"><li>
-                    <img src="#">
-                    <div class="mood-textbox">
-                        <p>잠을</p>
-                        <p>설쳤다구요?</p>
-                    </div>
-                </li></a>
-                <a href="#"><li>
-                    <img src="#">
-                    <div class="mood-textbox">
-                        <p>몸도 안 좋구?</p>
-                    </div>
-                </li></a>
-                <a href="#"><li>
-                    <img src="#">
-                    <div class="mood-textbox">
-                        <p>아무것도 위로가</p>
-                        <p>되지 않아요?</p>
-                    </div>
-                </li></a>
+                <?php
+                    }
+                ?>
             </ul>
         </div>
 

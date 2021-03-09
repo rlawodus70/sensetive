@@ -44,6 +44,9 @@ body{
 }
 /* 메뉴 영역 */
 header{
+    width: 100%;
+}
+#header-box{
     width: 1200px;
     display: flex;
     flex-direction: column;
@@ -74,6 +77,7 @@ nav{
     display: flex;
     flex-direction: row;
     padding-top: 7px;
+    margin-right: 43px;
 }
 #menu-list li:first{
     padding-left: 0px;
