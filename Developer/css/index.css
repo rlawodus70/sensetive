@@ -1,26 +1,4 @@
-@keyframes fill-box {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-.imgtext-fill-start {
-    animation: 5s fill-box backwards;
-}
-.imgtext-fillbox {
-    width: 0%;
-    height: 100%;
-    position: absolute;
-    top: 0px; left: 0px;
-    background-color: #fff;
-}
-.imgtext-front{
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-}
+
 /* 이미지 슬라이드 영역 */
 #main-imgslide{
     width: 100%; height: 600px;
@@ -91,6 +69,29 @@
     letter-spacing: 0.05rem;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+@keyframes fill-box {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+.imgtext-fill-start {
+    animation: 5s fill-box backwards;
+}
+.imgtext-fillbox {
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    top: 0px; left: 0px;
+    background-color: #fff;
+}
+.imgtext-front{
+    width: 100%;
+    height: 100%;
+    z-index: 10;
 }
 
 /* 베스트 브랜드 영역 */
@@ -332,23 +333,4 @@
     width: 100%;
     height: 600px;
     border-bottom: 1px solid #eee;
-}
-
-/* 푸터 영역 */
-footer{
-    width: 100%;
-    height: 100px;
-}
-.footer-top{
-    width: 100%;
-    border-bottom: 1px solid #eee;
-}
-.company-list{
-    width: 1200px;
-    display: flex;
-    flex-direction: row;
-}
-.company-list li{
-    margin: 0px;
-    padding: 15px 10px;
 }

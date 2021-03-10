@@ -42,7 +42,7 @@ body{
     background-image: url(../image/icon/top.png);
     background-repeat: no-repeat;
 }
-/* 메뉴 영역 */
+/* 헤더 영역 */
 header{
     width: 100%;
     z-index: 100;
@@ -66,6 +66,7 @@ header{
     letter-spacing: 0.020rem;
     color: #333;
 }
+/* 메뉴 영역 */
 nav{
     width: 100%;
     display: flex;
@@ -94,9 +95,19 @@ nav{
     font-size: 0.85rem;
     letter-spacing: 0.020rem;
 }
+#menu-list li a {
+    position: relative;
+    display: block;
+    transition: 0.3s;
+}
+#menu-list li a:hover{
+    color: #b4a79e;
+}
 .search-box{
     margin: 0px;
     margin-top: 7px;
+    position: relative;
+    display: flex;
 }
 .search-text{
     background-color: white;
@@ -109,4 +120,34 @@ nav{
     padding: 0px 20px;
     outline: none;
     color: #666;
+}
+.search-submit{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-image: url(../image/icon/search.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+/* 푸터 영역 */
+footer{
+    width: 100%;
+    height: 100px;
+}
+.footer-top{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+.company-list{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+.company-list li{
+    margin: 0px;
+    padding: 15px 10px;
 }

@@ -8,40 +8,13 @@
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <!-- Top(탑) 기능 -->
-    <div id="scroll-top">
-        <p class="scroll-text"><i></i>TOP</p>
-    </div>
-
     <!-- 모달 박스 -->
     <div id ="modal-box">
         <div id=""></div>
     </div>
-
-    <!-- 메뉴바 및 로고  -->
-    <header>
-        <div id="header-box">
-            <ul id="user-list">
-                <li><a href="">로그인/회원가입</a></li>
-                <li><a href="">주문/배송</a></li>
-                <li><a href="">장바구니</a></li>
-            </ul>
-            <nav>
-                <a class="logobox" href="#"><img src="image/sensitive_logo.png"></a>
-                <ul id="menu-list">
-                    <li><a href="">가구/수납</a></li>
-                    <li><a href="">패브릭/생활</a></li>
-                    <li><a href="">데코/조명</a></li>
-                    <li><a href="">패션의류</a></li>                                                                                                                          </li>
-                    <li><a href="">뷰티</a></li>
-                </ul>
-                <form class="search-box">
-                    <input type="text" placeholder="검색창" class="search-text">
-                </form>
-            </nav>
-        </div>
-    </header>
     
+    <?php include "module/header.php" ?>
+
     <!-- 이미지 슬라이드 구역 -->
     <div id="main-imgslide">
         <div class="imgslide-box">
@@ -143,8 +116,8 @@
                     </div>
                 </li>
                 <?php
-                $cate_top = array("","옷이 너무","잠을","몸도 안 좋구?","아무것도 위로가");
-                $cate_bottom = array("","꺼끌꺼끌해요","설쳤다구요?","","되지 않아요?");
+                $cate_top = array("","몸이","잠을","피부도 안 좋구?","아무것도 위로가");
+                $cate_bottom = array("","간지러워요?","설쳤다구요?","","되지 않아요?");
                 for($i=1; $i<=4; $i++){
                 ?>
                 <a href="#"><li>
@@ -161,79 +134,12 @@
         </div>
 
         <div id="day-recommen">
-
+            
         </div>
     </div>
 
-    <!-- 푸터 영역 -->
-    <footer>
-        <div class="footer-top">
-            <ul class="company-list">
-                <li><a href="#">회사 소개</a></li>
-                <li><a href="#">이용약관</a></li>
-                <li><a href="#">개인정보 처리방침</a></li>
-            </ul>
-        </div>
-    </footer>
-    <script>
-        const windowTop = document.querySelector("#scroll-top");
-
-        windowTop.addEventListener("click",function(){
-            window.scrollTo(0,0);
-        })
-    </script>
-    <script>
-        slideAnimation();
-        function slideAnimation(){
-            const slideBox = document.querySelector(".imgslide-box");
-            const slideTextBox =document.querySelectorAll(".imgslide-list li");
-            
-            let now = 0; // 첫번째 값
-            var imgcount = slideTextBox.length-1; // 마지막 값
-            document.querySelector(`.imgslide-list > li:nth-child(${now+1}) > .imgtext-fillbox`).classList.add("imgtext-fill-start");
-
-            slideTextBox.forEach((el,index)=>{
-                 el.addEventListener("click",function(){  
-                    clickAnimate(index);
-                 })  
-            })
-            function clickAnimate(index, el){
-                now = index;
-                startAnimate();
-            }
-            setInterval(() => {
-                now = now > 2 ? 0 : now+1;
-                startAnimate();
-            }, 5000);
-
-            function startAnimate(){
-                let nth = now;
-                const slideText = document.querySelectorAll(`.imgslide-list > li`);
-                
-                slideText.forEach(el => 
-                    el.querySelector(".imgtext-fillbox").classList.remove("imgtext-fill-start")
-                );
-                document.querySelector(`.imgslide-list > li:nth-child(${nth+1}) > .imgtext-fillbox`).classList.add("imgtext-fill-start");
-                slideBox.style.transform=`translateX(-${25*now}%)`;
-            }
-        }
-    </script>
-    <script>
-        const header = document.querySelector("header");
-        var menuHeight = header.offsetHeight+1;
-
-        window.addEventListener('scroll',function(){
-            let windowHeight = window.innerHeight;  // 스크롤 바 높이
-            let fullHeight = document.body.scrollHeight;    // 전체 스크롤 높이
-            console.log(window.scrollY);
-            if(menuHeight < window.scrollY ){
-                header.style.position='fixed';
-            } else {
-                header.style.position='relative';
-            }
-            // let position = window; // 현재 스크롤 높이
-            // console.log(fullHeight);
-        })        
-    </script>
+    <?php include "module/footer.php" ?>
+    <script src="js/common.js"></script>
+    <script src="js/slide.js"></script>
 </body>
 </html>
