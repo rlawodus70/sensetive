@@ -47,10 +47,9 @@ header{
     width: 100%;
     z-index: 100;
     background-color: white;
-    border-bottom: 1px solid #eee;
 }
 #header-box{
-    width: 1200px;
+    width: 1300px;
     display: flex;
     flex-direction: column;
 }
@@ -58,6 +57,7 @@ header{
     display: flex;
     flex-direction: row;
     margin-right: 0px;
+    margin-left: 0px;
     padding: 10px 0px;
 }
 #user-list li{
@@ -68,51 +68,24 @@ header{
 }
 /* 메뉴 영역 */
 nav{
+    padding: 20px 0px;
     width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 15px;
 }
 .logobox{
     margin: 0px 20px;
 }
-#menu-list{
-    display: flex;
-    flex-direction: row;
-    padding-top: 7px;
-    margin-right: 43px;
-}
-#menu-list li:first{
-    padding-left: 0px;
-}
-#menu-list li:nth-child(n+2){
-    padding-left: 50px;
-}
-#menu-list li{
-    display: flex;
-    flex-direction: row;
-    font-size: 0.85rem;
-    letter-spacing: 0.020rem;
-}
-#menu-list li a {
-    position: relative;
-    display: block;
-    transition: 0.3s;
-}
-#menu-list li a:hover{
-    color: #b4a79e;
-}
 .search-box{
-    margin: 0px;
-    margin-top: 7px;
     position: relative;
     display: flex;
+    margin-right: 0px;
 }
 .search-text{
     background-color: white;
     margin-right: 0px;
-    width: 262px;
+    width: 400px;
     border: 1px solid #b4a79e;
     border-radius: 15px;
     height: 28px;

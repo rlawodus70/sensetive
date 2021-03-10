@@ -1,9 +1,11 @@
 
 /* 이미지 슬라이드 영역 */
 #main-imgslide{
-    width: 100%; height: 600px;
-    background-color: khaki;
+    width: 1300px;
+    height: 410px;
     position: relative;
+    overflow: hidden;
+    border-radius: 30px;
 }
 /* 이미지 박스 영역 */
 .imgslide-box{
@@ -24,9 +26,10 @@
 
 /* 이미지 탭 텍스트 영역 */
 .main-imgslide{
-    width: 1200px;
-    height: 100%;
+    width: 1300px;
+    height: 410px;
     position: relative;
+    overflow: hidden;
 }
 .imgslide-list{
     position: absolute;
@@ -34,6 +37,7 @@
     display: flex;
     flex-direction: row;
     bottom: 0px;
+    left: 75px;
 }
 .imgslide-list li{
     width: 13%;
@@ -93,15 +97,25 @@
     height: 100%;
     z-index: 10;
 }
-
+#index-content{
+    width: 1300px;
+}
+#content-wrap{
+    display: flex;
+    flex-direction: row;
+}
+#content-category{
+    width: 17%;
+}
+#best-contentBox{
+    width: 83%;
+}
 /* 베스트 브랜드 영역 */
 #best-brandbox{
     width: 100%;
-    height: 550px;
-    background-color: #f9f9f9;
+    border-bottom: 1px solid #eee;
 }
 .best-brandbox{
-    width: 1200px;
     display: flex;
     flex-direction: column;
 }
@@ -142,13 +156,55 @@
     margin-right: 0px;
 }
 .brand-Content{
-    width: 380px; 
+    width: 250px;
 }
+/* 내용 카테고리 */
+#menu-list{
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+#menu-list li{
+    width: 150px;
+    height: 45px;
+    background-color: #eeeeee44;
+    color: #222;
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    margin-left: 0px;
+    font-weight: 600;
+    cursor: pointer;
+}
+#menu-list li img{
+    width: 40%;
+    height: 100%;
+}
+#menu-list li:first-child{
+    height: 25px;
+}
+/* #menu-list li a {
+    position: relative;
+    display: block;
+    transition: 0.3s;
+}
+#menu-list li a:hover{
+    color: #b4a79e;
+} */
 
 /* 베스트 브랜드 내용 영역 */
 .brand-imgBox{
     width: 100%;
-    height: 250px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px;
 }
 .brand-imgBox img{
     width: 100%;
@@ -181,29 +237,14 @@
     text-overflow: ellipsis;
 }
 
-/* 브랜드 픽 영역 */
-#brand-pick{
-    width: 100%;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #EAE5E1;
-}
-#brand-pick img{
-    width: auto;
-    height: 100%;
-}
-
 /* 베스트 제품 영역 */
 #best-product{
     width: 100%;
     background-color: white;
 }
 .best-product{
-    width: 1200px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: column;
     padding-top: 70px;
 }
 /* 베스트 제품 제목 영역 */
@@ -215,19 +256,19 @@
 }
 /* 베스트 제품 내용 영역 */
 #best_product-content{
-    width:900px; 
     display: flex;
     flex-wrap: wrap;
     margin-right: 0px;
+    margin-top: 30px;
 }
-.best_product-content:nth-child(3n+1){
+.best_product-content:nth-child(5n+1){
     margin-left: 0px;
 }
-.best_product-content:nth-child(3n){
+.best_product-content:nth-child(5n){
     margin-right: 0px;
 }
 .best_product-content{
-    width: 270px;
+    width: 210px;
     display: flex;
     flex-direction: column;
 }
@@ -237,7 +278,10 @@
 /* 베스트 상품 내용 영역 */
 .product-imgBox{
     width: 100%;
-    height: 270px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px 20px;
 }
 .product-imgBox img{
     width: 100%;
@@ -275,7 +319,6 @@
 #mood-categorie{
     width: 100%;
     height: 500px;
-    background-color:#f9f9f9;
 }
 .mood-categorie{
     width: 1400px;

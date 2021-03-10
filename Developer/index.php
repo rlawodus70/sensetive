@@ -47,67 +47,83 @@
 
     <!-- 컨텐츠 구역 -->
     <div id="index-content">
-        <div id="best-brandbox">
-            <div class="best-brandbox">
+        <div id="content-wrap">
+            <div id="content-category">
+                <ul id="menu-list">
+                    <li>
+                        <a href="">홈</a>
+                    </li>
+                    <li>
+                        <img src="image/menu-icon/sofa.png">
+                        <a href="">가구/수납</a>
+                    </li>
+                    <li><a href="">패브릭/생활</a></li>
+                    <li><a href="">데코/조명</a></li>
+                    <li><a href="">패션의류</a></li>
+                    <li><a href="">뷰티</a></li>
+                </ul>
+            </div>
 
-                <!-- 베스트 브랜드 타이틀 영역 -->
-                <div class="best-textbox">
-                    <p class="text-top">Best<strong>Brand</strong></p>
-                    <a class="text-bottom" href="#">브랜드 더 보기 ></a>
-                </div>
+            <div id="best-contentBox">
+                <div id="best-brandbox">
+                    <div class="best-brandbox">
 
-                <!-- 베스트 브랜드 컨텐츠 영역 -->
-                <div id="brand-Content">
-                    <?php
-                    for($i=1;$i<=3;$i++){
-                        ?>
-                        <div class="brand-Content">
-                            <a href="#">
-                                <div class="brand-imgBox">
-                                    <img src="image/brand/베스트브랜드<?=$i ?>.jpg">
-                                </div>
-                                <p class="brand-title">브랜드 타이틀</p>
-                                <p class="brand-explan">브랜드 설명</p>
-                            </a>
+                        <!-- 베스트 브랜드 타이틀 영역 -->
+                        <div class="best-textbox">
+                            <p class="text-top">Best<strong>Brand</strong></p>
+                            <a class="text-bottom" href="#">브랜드 더 보기 ></a>
                         </div>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
 
-        <div id="brand-pick">
-            
-        </div>
-
-        <div id="best-product">
-            <div class="best-product">
-                <!-- 베스트 브랜드 타이틀 영역 -->
-                <div id="best_product-textbox">
-                    <p class="text-top margin-left">베스트<strong>상품</strong></p>
-                    <a class="text-bottom" href="#">센서티브 엠디가<br>자신있게 추천합니다.</a>
-                </div>
-                <div id="best_product-content">
-                    <?php
-                    for($i=1; $i<=6; $i++){
-                    ?>
-                    <div class="best_product-content">
-                        <a href="#">
-                            <div class="product-imgBox">
-                                <img src="image/product/베스트상품<?=$i ?>.jpg">
-                            </div>
-                            <p class="product-title">상품 타이틀</p>
-                            <p class="product-price">상품 가격</p>
-                        </a>
+                        <!-- 베스트 브랜드 컨텐츠 영역 -->
+                        <div id="brand-Content">
+                            <?php
+                            for($i=1;$i<=4;$i++){
+                                ?>
+                                <div class="brand-Content">
+                                    <a href="#">
+                                        <div class="brand-imgBox">
+                                            <img src="image/brand/베스트브랜드<?=$i ?>.jpg">
+                                        </div>
+                                        <p class="brand-title">브랜드 타이틀</p>
+                                        <p class="brand-explan">브랜드 설명</p>
+                                    </a>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                        </div>
                     </div>
-                    <?php
-                    }
-                    ?>
                 </div>
-            </div>
+
+                <div id="best-product">
+                    <div class="best-product">
+                        <!-- 베스트 브랜드 타이틀 영역 -->
+                        <div id="best_product-textbox">
+                            <p class="text-top margin-left">베스트<strong>상품</strong></p>
+                            <a class="text-bottom" href="#">센서티브 엠디가<br>자신있게 추천합니다.</a>
+                        </div>
+                        <div id="best_product-content">
+                            <?php
+                            for($i=1; $i<=10; $i++){
+                            ?>
+                            <div class="best_product-content">
+                                <a href="#">
+                                    <div class="product-imgBox">
+                                        <img src="image/product/베스트상품<?=$i ?>.jpg">
+                                    </div>
+                                    <p class="product-title">상품 타이틀</p>
+                                    <p class="product-price">상품 가격</p>
+                                </a>
+                            </div>
+                            <?php
+                            }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div> 
         </div>
-        
+
         <div id="mood-categorie">
             <ul class="mood-categorie">
                 <li>           
