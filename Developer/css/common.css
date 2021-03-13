@@ -19,6 +19,55 @@ img{
 .layout--width{
     width: 1380px;
 }
+/* 공통 css 영역 */
+.row-box{
+    display: flex;
+    flex-direction: row;
+}
+.col-box{
+    display: flex;
+    flex-direction: column;
+}
+.title--color--first{
+    color: #B29F8E;
+}
+.title--color--two{
+    color: #85796D;
+}
+.title--color--three{
+    color:#B29F8E;
+}
+.title--color--fourth{
+    color:#999;
+}
+.max--width{
+    width: 100%;
+}
+.half--width{
+    width: 50%;
+}
+.half--width--two{
+    width: 25%;
+}
+.width--height{
+    width: 100%;
+    height: 100%;
+}
+.product--width{
+    width: 680px;
+}
+.img--fill{
+    object-fit: fill;
+}
+.pist-absolute{
+    position: absolute;
+}
+.margin--reset{
+    margin:0px;
+}
+input{
+    outline: none;
+}
 /* @keyframes smoothmenu {
 	0% {
 		transform: translateY(-40px);
@@ -169,7 +218,7 @@ footer{
     font-size: 0.9rem;
 }
 #footer__topbox{
-    border-bottom: 1px solid #f1f1f1;
+    /* border-bottom: 1px solid #f1f1f1; */
 }
 #main--footer{
     align-items: center;
