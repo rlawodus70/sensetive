@@ -1,0 +1,20 @@
+*{
+    margin:0 auto; 
+    padding:0;
+    border:0;
+    font:inherit;
+    color: inherit;
+}
+.margin-left{
+    margin-left: 0px;
+}
+ul,ol,li{
+    list-style: none;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+a{
+    text-decoration: none;
+}

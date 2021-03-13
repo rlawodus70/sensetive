@@ -1,0 +1,126 @@
+@font-face{
+    font-family: 'NotoSansKR';
+    src:url('../font/NotoSansKR-Regular.otf');
+}
+
+*{
+    font-family: "NotoSansKR";
+}
+html {
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+/* 스크롤 탑 영역 */
+#scroll-top{
+    position: relative;
+}
+.scroll-text{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0.4rem;
+    font-weight: 600;
+    position: fixed;
+    right: 100px;
+    border-radius: 50%;
+    bottom: 50px;
+    background-color: #eeedee;
+    color:#949494;
+    z-index: 20;
+}
+.scroll-text i{
+    width: 10px;
+    height: 10px;
+    padding-bottom: 2px;
+    background-image: url(../image/icon/top.png);
+    background-repeat: no-repeat;
+}
+/* 헤더 영역 */
+header{
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+}
+#header-box{
+    width: 1300px;
+    display: flex;
+    flex-direction: column;
+}
+#user-list{
+    display: flex;
+    flex-direction: row;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 10px 0px;
+}
+#user-list li{
+    padding-left: 20px;
+    font-size: 0.75rem;
+    letter-spacing: 0.020rem;
+    color: #333;
+}
+/* 메뉴 영역 */
+nav{
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.logobox{
+    margin: 0px 20px;
+}
+.search-box{
+    position: relative;
+    display: flex;
+    margin-right: 0px;
+}
+.search-text{
+    background-color: white;
+    margin-right: 0px;
+    width: 400px;
+    border: 1px solid #b4a79e;
+    border-radius: 15px;
+    height: 28px;
+    font-size: 0.8rem;
+    padding: 0px 20px;
+    outline: none;
+    color: #666;
+}
+.search-submit{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    background-image: url(../image/icon/search.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+}
+
+/* 푸터 영역 */
+footer{
+    width: 100%;
+    height: 100px;
+}
+.footer-top{
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+.company-list{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+}
+.company-list li{
+    margin: 0px;
+    padding: 15px 10px;
+}
