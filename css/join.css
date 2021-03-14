@@ -1,0 +1,58 @@
+#join--box{
+    width: 455px;
+    margin-top: 80px;
+}
+#join--title{
+    margin-left: 0px;
+    font-size: 25px;
+}
+/* 로그인 소셜 영역 */
+#social--wrap{
+    padding: 40px 0px;
+    border-bottom: 1px solid #f1f1f1;
+}
+#social--text{
+    margin-top: 10px;
+    color: #757575;
+    font-size: 15px;
+}
+#social--box{
+    margin-top: 20px;
+}
+#social--box a{
+    padding:0px 20px;
+}
+
+/* 유저 정보 입력 영역 */
+#user--info--wrap{
+    margin-top: 20px;
+}
+.input--box{
+    margin: 20px 0px;
+}
+#user__info--box p{
+    font-size: 18.4px;
+    color: #424242;
+    margin-bottom: 17px;
+    font-weight: 700;
+}
+.user__infobox{
+    width: 415px;
+    border: 1px solid #AF9C8B;   
+    padding: 20px 20px;
+}
+#user__info--box input::placeholder{
+    font-size: 19px;
+    color: #B7B7B7;
+}
+button{
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    font-size: 24px;
+    padding: 35px 20px;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #AF9C8B;
+    margin-bottom: 70px;
+}

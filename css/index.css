@@ -1,0 +1,295 @@
+
+/* 메인 이미지 영역 */
+#main__imgbox{
+    width: 100%;
+    height: 970px;
+    position: relative;
+    background-color:#F8F7F6;
+    padding-top: 48px;
+}
+#main__imgbox img{
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+}
+/* 메인 이미지 텍스트 영역 */
+.imgbox__textbox{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2rem;
+    position: relative;
+}
+.imgbox__textleft strong{
+    font-size: 76px;
+    font-weight: 600;
+    color: #000;
+}
+.imgbox__textleft{
+    z-index: 10;
+    margin-left: 0px;
+    font-size: 42px;
+    color: #C5B8AB;
+    letter-spacing: 0.4rem;
+}
+
+/* 오늘 제품 픽 */
+#main__pick{
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main__pick{
+    height: 305px;
+}
+
+/* 제품 픽 타이틀 */
+.pick__product--text{
+    width: 380px;
+    letter-spacing: 0.02rem;
+    font-size: 19px;
+}
+.pick__product--text strong{
+    font-size: 36px;
+    line-height: 60px;
+}
+
+/* 제품 픽 영역 */
+.pick__product--box{
+    width: 975px;
+    height: 100%;
+}
+.pick__product--list{
+    width: 265px;
+    height: 100%;
+}
+.pick__productlist--img{
+    width: 100%;
+    height: 215px;
+}
+.pick__productlist--text{
+    width: 100%;
+    height: 90px;
+    justify-content: center;
+    letter-spacing: 0.02rem;
+}
+.pick__productlist--text strong{
+    font-size: 19.5px;
+    font-weight: 700;
+}
+.pick__productlist--text p{
+    font-size: 15px;
+}
+.pick__product--list:first-child{
+    margin-left: 0px;
+}
+.pick__product--list:last-child{
+    margin-right: 0px;
+}
+
+/* 질병 제품 카테고리 영역 */
+#main__content--first{
+    width: 100%;
+    height: 965px;
+}
+#main--first__leftbox{
+    position: relative;
+}
+/* 질병 제품 왼쪽 영역 */
+#main__firstleft--text{
+    width: 100%;
+    margin-top: 130px;
+}
+#main__firstleft--text strong{
+    font-size: 43px;
+    letter-spacing: 0.7rem;
+    font-weight: 700;
+    line-height: 9rem;
+    position: relative;
+}
+#main__firstleft--text strong::before{
+    width: 108px;
+    height: 1px;
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    background-color: #B29F8E;
+}
+#main__firstleft--text p{
+    font-size: 15.8px;
+}
+/* 질병 제품 오른쪽 영역 */
+#main__firstright--box{
+    flex-wrap: wrap;
+}
+.brand--list{
+    height: 50%;
+    align-items: center;
+}
+.brand--list span{
+    margin-bottom: 100px;
+}
+.brand--list span strong{
+    font-size: 35px;
+    letter-spacing: 0.4rem;
+    font-weight: 700;
+    line-height: 9rem;
+    position: relative;
+}
+.brand--list span strong::before{
+    width: 70px;
+    height: 1px;
+    position: absolute;
+    content: "";
+    bottom: -10px;
+    background-color: #B29F8E;
+}
+.brand--list span p{
+    font-size: 12.7px;
+}
+
+/* 베스트 상품 영역 */
+#main__content--two{
+    width: 100%;
+    height: 820px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+}
+#main__second--box{
+    width: 1380px;
+    height: 668px;
+    margin-bottom: -20px;
+}
+/* 베스트 상품 왼쪽 영쪽 */
+#main--second__left{
+    height: 100%;
+    margin-left: 0px;
+    align-items: center;
+}
+#main__secondleft--box{
+    flex-wrap: wrap;
+}
+.product--list{
+    width: 318px;
+    height: 47%;
+    align-items: center;
+}
+.product--list:nth-child(n+1){
+    margin-left: 0px;
+}
+.product--list:nth-child(n+2){
+    background-color: white;
+}
+#product--listtext--title h1{
+    margin-top: 62px;
+    padding: 20px;
+}
+#product--listtext--title p{
+    font-size: 18.6px;
+    font-weight: 700;
+    line-height: 1.7rem;
+}
+#product--listtext--title span{
+    font-size: 40px;
+}
+#product--listtext--title span strong{
+    font-weight: 700;
+}
+
+/* 베스트 상품 오른쪽 영역 */
+#main--second__right{
+    height: 97%;
+    margin-right: 0px;
+    position: relative;
+    background-color: whitesmoke;
+}
+.product__imgbox{
+    width: 100%;
+    height: 230px;
+}
+.product__list--text{
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    letter-spacing: 0.02rem;
+}
+.product__list--text strong{
+    font-size: 19.5px;
+    font-weight: 700;
+}
+.product__list--text p{
+    font-size: 15px;
+}
+#main__secondright--text{
+    right: 0px;
+}
+.product__right--text{
+    padding: 40px;
+}
+.product__right--text strong{
+    font-size: 19.5px;
+    font-weight: 700;
+}
+.product__right--text p {
+    font-size: 15px;
+}
+
+/* 오늘 많이 받은 상품 */
+#main__content--three{
+    width: 100%;
+    height: 520px;
+    display: flex;
+    align-items: center;
+}
+#main--three__box{
+    height: 370px;
+}
+/* 오늘 가장 많이 본 영역 왼쪽 */
+#main--three__productview--left{
+    width: 360px;
+    margin-top: 30px;
+}
+#main--three__productview--left p{
+    font-size: 26px;
+}
+#main--three__productview--left strong{
+    font-size: 33px;
+    letter-spacing: 0.02rem;
+    font-weight: 700;
+}
+
+/* 오늘 가장 많이 본 영역 오른쪽 */
+#main--three__productview--right{
+    width: 1020px;
+    height: 100%;
+}
+.view__product--list{
+    width: 318px;
+    height: 100%;
+}
+.view__productlist--img{
+    width: 100%;
+    height: 290px;
+}
+.view__productlist--text{
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    letter-spacing: 0.02rem;
+}
+.view__productlist--text strong{
+    font-size: 19.8px;
+    font-weight: 700;
+}
+.view__productlist--text p{
+    font-size: 15px;
+}
+.view__product--list:first-child{
+    margin-left: 0px;
+}
+.view__product--list:last-child{
+    margin-right: 0px;
+}
